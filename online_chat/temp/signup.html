@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>signup</title>
+</head>
+<body>
+    <div>
+        <form class="col-4" method="post" id="f">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" id="bttn">signup</button>
+        </form>
+        <div id="errormessages" class="col-7">
+            <p id="m" style="width: fit-content;color:#ff0000">{{ message }}</p>
+        </div>
+        <div class="col-7" id="detals">
+            <p id="psgup">| Your password must be more than 8 characters</p>
+            <p id="psgup">| your password shouldn't be simple</p>
+            <p id="psgup">| use @#$%... and special chars in make your password</p>
+            <p id="psgup">| If you follow all of the above and have problems,
+            your username may have been used by someone else, so change it and try again.</p>
+            <p id="psgup">you have an account?</p>
+            <a id="sgup" href="/accounts/login">signin</a>
+        </div>
+    </div>
+    <script>
+        var message = document.getElementById("m");
+        message = String(message.innerHTML);
+        if(message[0] === "s"){
+            document.getElementById("errormessages").style.backgroundColor="#FFFFFF24";
+        };
+    </script>
+</body>
+</html>

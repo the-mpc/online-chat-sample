@@ -1,0 +1,234 @@
+body{
+    top:0px;
+    padding:0px;
+    margin:0px;
+    background-color: #01182c;
+}
+.root::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.col-1{width:8.33%}
+
+.col-2{width:16.66%}
+
+.col-3{width:25%}
+
+.col-4{width:33.33%}
+
+.col-5{width:41.66%}
+
+.col-6{width:50%}
+
+.col-7{width:58.33%}
+
+.col-8{width:66.66%}
+
+.col-9{width:75%}
+
+.col-10{width:83.33%}
+
+.col-11{width:91.66%}
+
+.col-12{width:100%}
+
+input{
+    color:#000000;
+    background-color: #9B9B9B33;
+    border:none;
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    font-size: large;
+    width:50%;
+    padding:10px;
+    margin-left:25%;
+    margin-top:5%;
+    letter-spacing: 3px;
+    border-radius: 5px;
+}
+#header{
+    height:25%;
+}
+
+::placeholder{
+    color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    font-size:large;
+    letter-spacing: 3px;
+}
+button{
+    color:#000000;
+    background:none;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-size: large;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    letter-spacing: 3px;
+    padding:15px;
+    border-radius: 5px;
+    transition: background-color .4s;
+    float:left;
+    margin:5px;
+}
+
+button:hover{
+    background-color: #01182c;
+    color:#ffffff;
+}
+
+#chatbar{
+    height:100%;
+    margin-left:25%;
+    background-color: #01182c;
+    float: left;
+    overflow-y: scroll;
+}
+#chatbar::-webkit-scrollbar{
+    display: none;
+}
+#members{
+    height: 100%;
+    position: fixed;
+    background-color: #01182c;
+    float:left;
+    border-right: 2px solid #ffffff;
+
+}
+h1{
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    letter-spacing: 3px;
+    padding:10px;
+    margin:15px;
+    position: fixed;
+    border-radius: 5px;
+    z-index: 1000;
+    width:15%;
+}
+#psgup,#m{
+    width: auto;
+    color: #000000;
+    font-size: large;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    letter-spacing: 3px;
+    margin-left:9%;
+    margin-top:5%;
+}
+#message{
+    z-index: -1000;
+    height: auto;
+    border-radius: 5px;
+    background-color:#FFFFFF24;
+    margin-top:10%;
+    margin-left:15px;
+}
+h2{
+    color:#ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    letter-spacing: 3px;
+    width: auto;
+    margin-left:15px;
+}
+
+#messagebox{
+    background-color:#01182c;
+    height: 100%;
+    border-left: 2px solid #ffffff;
+    float: left;
+    margin-left:75%;
+    position: fixed;
+}
+
+.imojies{
+    float:left;
+    background-color: #ffffff;
+}
+
+#imo{
+    height: 100%;
+    margin-top:20%;
+    margin-left:15%;
+    overflow-y:scroll;
+}
+#imo::-webkit-scrollbar{
+    display: none;
+}
+#id_room_code::placeholder{
+    color:#ffffff;
+}
+#id_room_code{
+    color:#ffffff;
+}
+
+#room{
+    float: left;
+    height: 25%;
+    border-bottom: 2px solid #ffffff;
+    margin:4%;
+}
+#f{
+    margin-left:auto;
+    height: 100%;
+    background-color: #ffffff;
+    float: left;
+    position: fixed;
+}
+
+label{
+    display: none;
+}
+
+#id_username,#id_password,#id_password1,#id_password2,#id_email,#id_first_name,#id_last_name{
+    float: left;
+    width:80%;
+    margin-left:10%;
+}
+#bttn{
+    width: 80%;
+    margin:10%;
+    margin-left:9%;
+}
+
+#id_captcha{
+    margin-left:10%;
+    float:left;
+    margin-top:5%;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#errormessages{
+    float: left;
+    margin-left:36.65%;
+    height: 10%;
+;
+}
+
+#sgup{
+    color:#000000;
+    font-size: large;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    letter-spacing: 3px;
+    text-decoration: none;
+    transition: background-color .4s;
+    float: left;
+    border-radius: 5px;
+    padding:10px;
+    margin-left:9%;
+    margin-top:5%;
+}
+#sgup:hover{
+    background-color:#01182c;
+    color:#ffffff;
+
+}
+
+#detals{
+    background-color: #FFFFFFE5;
+    height: 70%;
+    float: right;
+    margin-right:5%;
+}

@@ -1,0 +1,30 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>signin</title>
+</head>
+<body>
+    <div class="root">
+        <form class="col-4" method="post" id="f">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" id="bttn">signin</button>
+            <p id="psgup">don't have an account?</p>
+            <a id="sgup" href="/accounts/signup">signup</a>
+        </form>
+        <div id="errormessages" class="col-7">
+            <p id="m" style="width: fit-content;color:#ff0000">{{ message }}</p>
+        </div>
+    </div>
+    <script>
+        var message = document.getElementById("m");
+        message = String(message.innerHTML);
+        if(message[0] === "s"){
+            document.getElementById("errormessages").style.backgroundColor="#FFFFFF24";
+        };
+    </script>
+</body>
+</html>

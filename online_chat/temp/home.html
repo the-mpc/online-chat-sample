@@ -1,0 +1,30 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>home</title>
+</head>
+<body>
+    <div class="root">
+        <div id="header" style="height: 10%" class="col-12">
+            <a href="accounts/login">signin</a>
+            <a href="accounts/signup">signup</a>
+            <a href="accounts/signout">signout</a>
+        </div>
+        <div class="col-12" id="header">
+            <form method="POST" action="chat/checkview">
+                {% csrf_token %}
+                {{ form }}
+            </form>
+        </div>
+        {% for i in rooms %}
+            <div id="room" class="col-3">
+                <h2>room code : <a href="/chat/{{ i.room_code }}">{{ i.room_code }}</a></h2>
+                <h2>admin : {{ i.created_by }}</h2>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
